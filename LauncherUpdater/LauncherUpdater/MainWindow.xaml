@@ -1,0 +1,67 @@
+﻿<Window x:Class="LauncherUpdater.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LauncherUpdater"
+        mc:Ignorable="d"
+        Title="Updater" Height="200" Width="390"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize" ContentRendered="Window_ContentRendered">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Vertical"
+                    Grid.Row="0" Grid.RowSpan="2"
+                    Grid.Column="0" Grid.ColumnSpan="2">
+            <GroupBox Header="Versions">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Server Version:"
+                           FontSize="14"/>
+                    <Label Content="No Version"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           Name="Server_Ver"/>
+                    <Label Content="Client Version:"
+                           FontSize="14"/>
+                    <Label Content="No Version"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           Name="Client_Ver"/>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Status">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Server:"
+                           FontSize="14"/>
+                    <Label Content="No Version"
+                           FontWeight="Bold"
+                           FontSize="14"
+                           Name="Server_Status"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <Button Content="Start Launcher"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="2" Grid.Column="1"
+                Width="130"
+                Height="30"
+                Name="Start_Launcher" Click="Start_Launcher_Click"/>
+        <Button Content="Update"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Grid.Row="2" Grid.Column="0"
+                Width="130"
+                Height="30"
+                Name="Update_Launcher" Click="Update_Launcher_Click"/>
+    </Grid>
+</Window>
